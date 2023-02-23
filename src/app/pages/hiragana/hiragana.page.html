@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+      <ion-title>HIRAGANA</ion-title>
+    </ion-buttons>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item #nivel1 button detail="true" [routerLink]="['/carta']">
+      Nível 1
+    </ion-item>
+    <ion-item #nivel2 button disabled detail="true" >
+      Nível 2
+    </ion-item>
+  </ion-list>
+</ion-content>

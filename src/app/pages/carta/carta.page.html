@@ -1,0 +1,192 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerLink]="['/hiragana']">
+        <ion-icon size="large" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <div class="bloqueioDeClick"></div>
+      <ion-label>
+        <app-nivel nivel="1"></app-nivel>
+      </ion-label>      
+      <ion-range value="{{p}}"></ion-range>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <input type="text" type="checkbox" id="flip" />
+  <div class="principal animate__animated animate__zoomIn">
+    <div class="bloqueioDeClick2"></div>
+    <label class="carta" for="flip">
+      <div class="frente animate__animated animate__pulse animate__infinite animate__slow">
+        <h1>{{ front }}</h1>
+      </div>
+      <div class="verso">
+        <h2>{{ back }}</h2>
+      </div>
+    </label>
+  </div>
+
+  <div class="ion-padding monitor animate__animated animate__fadeInLeft">
+    <div class="r">
+      <p>{{ resposta }}</p>
+    </div>
+  </div>
+
+  <div class="teclado">
+    <div class="tabela animate__animated animate__fadeInRight">
+      <div [ngStyle]="{'display': display1}" class="botoes">
+        <ion-col>
+          <ion-row>
+            <ion-button id="btn1" (click)="responder('あ','btn1')">a</ion-button>
+            <!-- <ion-button (click)="responder('か')">ka</ion-button>
+            <ion-button (click)="responder('さ')">sa</ion-button>
+            <ion-button (click)="responder('た')">ta</ion-button>
+            <ion-button (click)="responder('な')">na</ion-button>
+            <ion-button (click)="responder('は')">ha</ion-button>
+            <ion-button (click)="responder('ま')">ma</ion-button>
+            <ion-button (click)="responder('や')">ya</ion-button>
+            <ion-button (click)="responder('ら')">ra</ion-button>
+            <ion-button (click)="responder('わ')">wa</ion-button>
+          </ion-row>
+
+          <ion-row> -->
+            <ion-button id="btn2" (click)="responder('い','btn2')">i</ion-button>
+            <!-- <ion-button (click)="responder('き')">ki</ion-button>
+            <ion-button (click)="responder('し')">shi</ion-button>
+            <ion-button (click)="responder('')">chi</ion-button>
+            <ion-button (click)="responder('ち')">ni</ion-button>
+            <ion-button (click)="responder('に')">hi</ion-button>
+            <ion-button (click)="responder('ひ')">mi</ion-button>
+            <ion-button></ion-button>
+            <ion-button (click)="responder('')">ri</ion-button>
+            <ion-button></ion-button>
+          </ion-row>          
+      
+          <ion-row> -->
+            <ion-button id="btn3" (click)="responder('う','btn3')">u</ion-button>
+            <!-- <ion-button (click)="responder('')">ku</ion-button>
+            <ion-button (click)="responder('')">su</ion-button>
+            <ion-button (click)="responder('')">tsu</ion-button>
+            <ion-button (click)="responder('')">nu</ion-button>
+            <ion-button (click)="responder('')">fu</ion-button>
+            <ion-button (click)="responder('')">mu</ion-button>
+            <ion-button (click)="responder('')">yu</ion-button>
+            <ion-button (click)="responder('')">ru</ion-button>
+            
+            <ion-button (click)="responder('')">n</ion-button>
+
+          </ion-row>          
+      
+          <ion-row> -->
+            <ion-button id="btn4" (click)="responder('え','btn4')">e</ion-button>
+            <!-- <ion-button (click)="responder('')">ke</ion-button>
+            <ion-button (click)="responder('')">se</ion-button>
+            <ion-button (click)="responder('')">te</ion-button>
+            <ion-button (click)="responder('')">ne</ion-button>
+            <ion-button (click)="responder('')">he</ion-button>
+            <ion-button (click)="responder('')">me</ion-button>
+            <ion-button></ion-button>
+            <ion-button (click)="responder('')">re</ion-button>
+            <ion-button></ion-button>
+          </ion-row>
+          
+          <ion-row> -->
+            <ion-button id="btn5" (click)="responder('お','btn5')">o</ion-button>
+            <!-- <ion-button (click)="responder('')">ko</ion-button>
+            <ion-button (click)="responder('')">so</ion-button>
+            <ion-button (click)="responder('')">to</ion-button>
+            <ion-button (click)="responder('')">no</ion-button>
+            <ion-button (click)="responder('')">ho</ion-button>
+            <ion-button (click)="responder('')">mo</ion-button>
+            <ion-button (click)="responder('')">yo</ion-button>
+            <ion-button (click)="responder('')">ro</ion-button>
+            <ion-button (click)="responder('')">wo</ion-button> -->
+          </ion-row>
+          
+        <!-- </ion-col>
+      </div>
+      <div [ngStyle]="{'display': display2}" class="botoes">
+        <ion-col>
+          <ion-row>
+            <ion-button></ion-button>
+            <ion-button (click)="responder('')">ga</ion-button>
+            <ion-button (click)="responder('')">za</ion-button>
+            <ion-button (click)="responder('')">da</ion-button>
+            <ion-button (click)="responder('')">ba</ion-button>
+            <ion-button (click)="responder('')">pa</ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+          </ion-row>
+      
+          <ion-row>
+            <ion-button></ion-button>
+            <ion-button (click)="responder('')">gi</ion-button>
+            <ion-button (click)="responder('')">ji</ion-button>
+            <ion-button (click)="responder('')">ji</ion-button>
+            <ion-button (click)="responder('')">bi</ion-button>
+            <ion-button (click)="responder('')">pi</ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+          </ion-row>
+      
+          <ion-row>
+            <ion-button></ion-button>
+            <ion-button (click)="responder('')">gu</ion-button>
+            <ion-button (click)="responder('')">zu</ion-button>
+            <ion-button (click)="responder('')">dzu</ion-button>
+            <ion-button (click)="responder('')">bu</ion-button>
+            <ion-button (click)="responder('')">pu</ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+      
+          </ion-row>
+      
+          <ion-row>
+            <ion-button></ion-button>
+            <ion-button (click)="responder('')">ge</ion-button>
+            <ion-button (click)="responder('')">ze</ion-button>
+            <ion-button (click)="responder('')">de</ion-button>
+            <ion-button (click)="responder('')">be</ion-button>
+            <ion-button (click)="responder('')">pe</ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+          </ion-row>
+      
+          <ion-row>
+            <ion-button></ion-button>
+            <ion-button (click)="responder('')">go</ion-button>
+            <ion-button (click)="responder('')">zo</ion-button>
+            <ion-button (click)="responder('')">do</ion-button>
+            <ion-button (click)="responder('')">bo</ion-button>
+            <ion-button (click)="responder('')">po</ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+            <ion-button></ion-button>
+          </ion-row> -->
+      
+        </ion-col>
+      </div>
+
+    </div>
+    <!-- <div class="troca" align="center">
+      <ion-button (click)="trocarTeclado()">
+        <ion-icon slot="icon-only" name="swap-horizontal"></ion-icon>
+      </ion-button>
+    </div> -->
+  </div>
+
+</ion-content>
+
+
+<!-- AUDIO : https://www.learn-japanese-adventure.com/learn-to-speak-japanese-online.html -->
