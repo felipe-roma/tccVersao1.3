@@ -17,6 +17,14 @@ const routes: Routes = [
   {
     path: 'carregando',
     loadChildren: () => import('./pages/carregando/carregando.module').then( m => m.CarregandoPageModule)
+  },
+  {
+    path: 'tutorial',
+    loadChildren: () => import('./pages/tutorial/tutorial.module').then( m => m.TutorialPageModule)
+  },
+  {
+    path: 'carta-tutorial',
+    loadChildren: () => import('./pages/carta-tutorial/carta-tutorial.module').then( m => m.CartaTutorialPageModule)
   }
 ];
 @NgModule({

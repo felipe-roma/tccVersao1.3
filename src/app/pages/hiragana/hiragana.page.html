@@ -3,17 +3,21 @@
     <ion-buttons>
       <ion-back-button></ion-back-button>
       <ion-title>HIRAGANA</ion-title>
-    </ion-buttons>    
+      <ion-badge color="dark" slot="end">Nv. {{nivel}}</ion-badge>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item #nivel1 button detail="true" [routerLink]="['/carta']">
-      Nível 1
+    <ion-item button detail="true" [routerLink]="['/tutorial']">
+      Tutorial
     </ion-item>
-    <ion-item #nivel2 button disabled detail="true" >
-      Nível 2
+  </ion-list>
+  <ion-list *ngFor="let n of niveis; let i=index">
+    <ion-item detail="true" [routerLink]="['/carta']">
+      {{niveis[i]}}
     </ion-item>
+
   </ion-list>
 </ion-content>

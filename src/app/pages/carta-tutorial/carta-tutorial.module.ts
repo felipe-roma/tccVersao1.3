@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CartaPageRoutingModule } from './carta-routing.module';
+import { CartaTutorialPageRoutingModule } from './carta-tutorial-routing.module';
 
-import { CartaPage } from './carta.page';
+import { CartaTutorialPage } from './carta-tutorial.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CartaPageRoutingModule,
+    CartaTutorialPageRoutingModule
   ],
-  declarations: [
-    CartaPage
-  ]
+  declarations: [CartaTutorialPage]
 })
-export class CartaPageModule {}
+export class CartaTutorialPageModule {}
